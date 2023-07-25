@@ -27,14 +27,14 @@ function solveEquation(a,b,c){
 function calculateTotalMortgage(percent,contribution,amount,countMonths){
 
  let P = percent/ 100 / 12;
-
  let S = amount - contribution;
-
  let n = countMonths ;
 
- let totalAmount = n * (S * (P + (P / (Math.pow ((1 + P),n) - 1))));
+ let monthlyPayment = (S * (P + (P / (Math.pow ((1 + P),n) - 1))));
 
-return totalAmount.toFixed(2);
+let totalAmount = (monthlyPayment * n).toFixed(2);
+
+return parseFloat(totalAmount);
 }
 
 
