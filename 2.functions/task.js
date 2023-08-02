@@ -1,12 +1,12 @@
 
 function getArrayParams(...arr) {
- var numbers = [...arr];
+ const numbers = [...arr];
 if(arr.length === 0)
         return false;
-  var minValue = Math.min.apply(null, numbers);
-  var maxValue = Math.max.apply(null, numbers);
-  var getAverage = (numbers) => {
-    var sum = numbers.reduce((acc, number) => acc + number, 0);
+  const minValue = Math.min.apply(null, numbers);
+  const maxValue = Math.max.apply(null, numbers);
+  const getAverage = (numbers) => {
+    const sum = numbers.reduce((acc, number) => acc + number, 0);
     return (sum / numbers.length).toFixed(2);
   };
 return {min:minValue, max:maxValue, avg:parseFloat(getAverage(numbers))};

@@ -1,12 +1,12 @@
 describe("Домашнее задание к занятию 3 «Массивы»", () => {
   describe("Задача №1 Сравнить массивы", () => {
-    it("[1,2,3] === [1,2,3]  true", () => {
+   it("[1,2,3] === [1,2,3]  true", () => {
       expect(compareArrays([1, 2, 3], [1, 2, 3])).toEqual(true);
-    });
+   });
 
     it("[1, 2], [1, 2, 3] false", () => {
-      expect(compareArrays([1, 2], [1, 2, 3])).toEqual(false);
-    });
+     expect(compareArrays([1, 2], [1, 2, 3])).toEqual(false);
+   });
 
     it("[1, 2, 3] === [3, 2, 1] false", () => {
       expect(compareArrays([1, 2, 3], [3, 2, 1])).toEqual(false);
