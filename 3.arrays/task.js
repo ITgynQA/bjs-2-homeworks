@@ -19,13 +19,15 @@ function compareArrays(array1, array2){
      return 0;
  users = [...users];
 
- const sum = users.filter(user => user.gender === gender)
-    .map(user => user.age);
+ //const sum = users.filter(user => user.gender === gender).map(user => user.age);
+  // const result = sum.reduce((acc, number) => acc + number, 0);
+  // const length = sum.length;
+  // return result/length;
 
-   const result = sum.reduce((acc, number) => acc + number, 0);
-   const length = sum.length;
+return users.filter(user => user.gender === gender)
+    .map(user => user.age)
+    .reduce((acc, age, index, arr) => acc + age / arr.length, 0);
 
-  return result/length;
 }
 
 
