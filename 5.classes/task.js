@@ -99,6 +99,7 @@ findBookBy(type, value){
   }
 }
 
+
 class Student {
   constructor(name) {
     this.name = name;
@@ -125,7 +126,8 @@ class Student {
     if(!this.marks.hasOwnProperty(subject)){
       return this.marksAvg[subject] = 0;
     }
-    this.marksAvg[subject] = this.marks[subject].reduce((a, b) => a + b, 0) / this.marks[subject].length;
+    this.marksAvg[subject] = this.marks[subject].reduce((a, b) => a + b, 0)/
+     this.marks[subject].length;
     return this.marksAvg[subject];
   }
 
@@ -143,6 +145,7 @@ class Student {
       return this.allMarksAvg
   }
 }
+
 
 
 
